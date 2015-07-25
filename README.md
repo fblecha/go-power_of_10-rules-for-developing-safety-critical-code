@@ -1,4 +1,5 @@
-# Please note that this is a WIP until this notice has been removed
+# This is a WIP
+Please note that this is a WIP until this notice has been removed
 
 This is a translation of the "The Power of 10: Rules for Developing Safety-Critical Code" by Gerard J. Holzmann into go.
 
