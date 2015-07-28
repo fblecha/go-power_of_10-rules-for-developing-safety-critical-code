@@ -11,6 +11,14 @@ The original paper:
 > "Restrict all code to very simple control flow constructs -- do not use goto statements, setjmp or longjmp constructs, 
 > and direct or indirect recursion."
 
+Go's take on Rule 1:
+* Go actually has a [goto statement](http://golang.org/ref/spec#Goto_statements), but using it is unusual.  According to this rule, it should actively be avoided.
+* Go supports recursion, but again *by rule* it should be avoided.  [Arden Labs](http://www.goinggo.net/2013/09/recursion-and-tail-calls-in-go_26.html) has a good writeup on it:
+
+> When we say that Go does not optimize for recursion, we are talking about the fact that Go does not attempt to look at our 
+> recursive functions and find ways to minimize stack growth. 
+
+
 ### Rule 2: "All loops must have fixed bounds.  This prevents runaway code."
 
 The original paper:
