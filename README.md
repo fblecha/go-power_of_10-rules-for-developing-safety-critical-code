@@ -60,7 +60,17 @@ The oringal paper:
 > "The return value of non-void functions must be checked by each calling function, and the validity 
 > of parameters must be checked inside each function. "
 
-This is idomatic go with the using the built-in error type as one of the values returned from a function.
+This is idomatic go with the using the built-in error type as one of the values returned from a function.  Go has a specific error type and returning that as part of a return is very normal.  For example (from the golang blog):
+
+```
+f, err := os.Open("filename.ext")
+if err != nil {
+    log.Fatal(err)
+}
+// do something with the open *File f
+```
+
+Read the [section on error handling](http://blog.golang.org/error-handling-and-go) for a more in-depth discussion on go's error handling capability.
 
 
 ### Rule 8: "User the preprocessor sparingly."
