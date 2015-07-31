@@ -60,6 +60,9 @@ The oringal paper:
 > "The return value of non-void functions must be checked by each calling function, and the validity 
 > of parameters must be checked inside each function. "
 
+This is idomatic go with the using the built-in error type as one of the values returned from a function.
+
+
 ### Rule 8: "User the preprocessor sparingly."
 
 The original paper:
