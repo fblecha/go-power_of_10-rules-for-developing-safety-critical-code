@@ -62,7 +62,7 @@ The oringal paper:
 
 This is idomatic go with the using the built-in error type as one of the values returned from a function.  Go has a specific error type and returning that as part of a return is very normal.  For example (from the golang blog):
 
-```
+```go
 f, err := os.Open("filename.ext")
 if err != nil {
     log.Fatal(err)
