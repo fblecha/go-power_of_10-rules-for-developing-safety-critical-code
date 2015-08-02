@@ -1,7 +1,7 @@
 # This is a WIP
 Please note that this is a WIP until this notice has been removed
 
-This is a translation of the "The Power of 10: Rules for Developing Safety-Critical Code" by Gerard J. Holzmann into go.  See also the [wikipedia entry](https://en.wikipedia.org/wiki/The_Power_of_10:_Rules_for_Developing_Safety-Critical_Code).
+This is a translation of the "The Power of 10: Rules for Developing Safety-Critical Code" by [Gerard J. Holzmann](http://spinroot.com/gerard/) into go.  See also the [wikipedia entry](https://en.wikipedia.org/wiki/The_Power_of_10:_Rules_for_Developing_Safety-Critical_Code).
 
 ##The Power of 10 Rules
 
