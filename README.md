@@ -12,7 +12,7 @@ The original paper:
 > and direct or indirect recursion."
 
 Go's take on Rule 1:
-* Go actually has a [goto statement](http://golang.org/ref/spec#Goto_statements), but using it is unusual.  According to this rule, it should actively be avoided.
+* Go actually has a [goto statement](http://golang.org/ref/spec#Goto_statements), but using it is unusual.  According to this rule, ***it should actively be avoided***.
 * Go supports recursion, but again *by rule* it should be avoided.  [Arden Labs](http://www.goinggo.net/2013/09/recursion-and-tail-calls-in-go_26.html) has a good writeup on it:
 
 > When we say that Go does not optimize for recursion, we are talking about the fact that Go does not attempt to look at our 
@@ -26,10 +26,30 @@ The original paper:
 > statically that a preset upper-bound on the number of iterations of a loop cannot be exceeded. If the 
 > loop-bound cannot be proven statically, the rule is considered violated."
 
+It's possible to write an infinite loop as:
+```go
+for {
+    //no bounds, so we have an infinite loop
+}
+```
+but typically you have a loop bounds expressed:
+```go
+for i := 1;  i<=5; i++ {
+}
+```
+So can you get a warning if the upper bounds isn't set?
+
+
+
 ### Rule 3: "Avoid heap memory allocation."
 
 The original paper:
 > "Do not use dynamic memory allocation after initialization." 
+
+There is nothing explict about go that prevents this, but rather I see this as part of the overall philosophy that influences a particular app/architecture/etc.  At least from people I've spoke to previously that worked on console games, this seems to be more common there than in other development areas.  
+
+(need to insert a concrete example)
+
 
 ### Rule 4: "Restrict functions to a single printed page."
 
@@ -37,6 +57,10 @@ The original paper:
 > "No function should be longer than what can be printed on a single sheet of paper in a standard reference 
 > format with one line per statement and one line per declaration. Typically, this means no more than 
 > about 60 lines of code per function. "
+
+
+(can any linter check this?)
+
 
 ### Rule 5: "Use a minimum of two runtime assertions per function."
 
