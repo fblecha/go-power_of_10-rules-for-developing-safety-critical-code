@@ -76,7 +76,7 @@ The original paper:
 > about 60 lines of code per function. "
 
 
-(can any linter check this?)
+_(can any linter check this?)_
 
 
 ## Rule 5: "Use a minimum of two runtime assertions per function."
